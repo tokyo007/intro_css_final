@@ -1,0 +1,394 @@
+.visually-hidden-focusable {
+  position: absolute;
+  left: -1000px;
+}
+
+.visually-hidden-focusable:focus {
+  position: static;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background-color: #e77e23;
+  color: white; 
+  border-radius: 5px; 
+}
+
+nav {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  background-color: hsl(127, 26%, 48%); 
+  padding: 10px;
+  font-family: 'Arial', 'Noto Sans', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff; /* White text for contrast */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+  color: #000000; /* Change text color on hover */
+  background-color: rgb(255, 255, 255); /* Slight background change for a hovering effect */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center; 
+    font-family:Arial, sans-serif;
+    font-size: 37px;
+    padding: 5%;
+    margin-bottom: 20px;
+}
+
+h2 {
+  text-align: left; 
+  font-family:Arial, sans-serif;
+  font-size: 27px;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center; 
+  font-family:Arial, sans-serif;
+  font-size: 22px;
+  margin-left: 2%;
+  margin-bottom: 10px;
+}
+
+h4 {
+  text-align: center; 
+  font-family:Arial, sans-serif;
+  font-size: 20px;
+  margin-left: 2%;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 17px;
+  font-family:Arial, sans-serif;
+  margin-left: 2%;
+  line-height: 20px;
+}
+
+main {
+  display: grid;
+  grid-column:auto: auto;
+  gap: 10px; 
+  padding: 20px;
+}
+
+li{
+  font-size: 18px;
+  line-height: bold 5.5;
+  font-family: 'Arial', 'Noto Sans', Verdana, Geneva, Tahoma, sans-serif;
+  display: inline;
+  padding: 15px;
+  margin: 5px;
+  width: 100%;
+}  
+
+.stock-box-two-column {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+  gap: 20px; /* Space between the columns */
+  padding: 20px; /* Add padding to the overall grid */
+  max-width: 800px; /* Limit the width for better readability */
+  margin: 0 auto; /* Center the grid on the page */
+}
+
+.stock-list {
+  padding: 20px;
+  border: 2px solid #0077cc; /* Define a border around each box */
+  border-radius: 15px; /* Round the corners */
+  background-color: #f9f9f9; /* Light background color for distinction */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+}
+
+.stock-list:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover for emphasis */
+}
+
+.marketcap-grid {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+  gap: 20px; /* Add space between items */
+  padding: 15px; /* Padding around the grid */
+  max-width: 800px; /* Limit the grid container width */
+  margin: 0 auto; /* Center the grid on the page */
+}
+
+@media (max-width: 800px) {
+  .marketcap-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .marketcap-grid {
+    grid-template-columns: 1fr; /* Switch to a single column on smaller screens */
+  }
+}
+
+.image-box {
+  padding: 10px; /* Space inside the box */
+  margin:5px;
+  border: 3px solid #0077cc; /* Border around each image box */
+  border-radius: 10px; /* Round the corners of the box */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add depth */
+  text-align: center; /* Center align the content */
+  background-color: #f9f9f9; /* Light background color for the box */
+  /*transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add a smooth transition */
+}
+
+.image-box img {
+  width: 100%; /* Resize the image to take 80% of the container's width */
+  max-width: 175px; /* Limit the maximum width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  margin: 0 auto; /* Center the image inside the container */
+  display: block; /* Fix the inline space issue for images */
+  border-radius: 10px; /* Apply a slight rounding for consistency with box */
+  border: 1px solid #0077cc; /* Add a border around the image */
+  padding-bottom: 10px black ;
+}
+
+.image-box:hover {
+  transform: translateY(-5px); /* Add a lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Intensify the shadow when hovered */
+}
+
+.image-box:nth-child(2n+1) {
+  background-color: #52a7b3; /* Light blue for first items */
+}
+
+footer {
+  background-color: hsl(127, 26%, 58%);
+  font-family: 'Arial', 'Noto Sans', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 100%;
+  font-color: rgb(0, 0, 0);
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+
+.img-market-box {
+  text-align: left; /* Centers the image container */
+  margin: 20px 0; /* Adds vertical space above and below the image container */
+}
+
+.market-img {
+  width: 20%; /* Resize the image to 60% of the container’s width */
+  max-width: 500px; /* Limit the maximum width for better visual control */
+  height: auto; /* Maintain aspect ratio */
+  border: 3px solid #0077cc; /* Add a border for a clear visual frame */
+  border-radius: 10px; /* Round the corners of the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  margin: 0 auto; /* Center the image horizontally within its container */
+  /*transition: transform 0.3s ease; /* Add a smooth effect on hover */
+}
+
+
+/*a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    font-family:Arial, sans-serif;
+}
+
+
+
+/*img{
+  width:150px;
+  height:150px;
+} 
+
+p {text-align:center;
+} 
+
+div{
+  display: inline-block;
+  /*border: 10px solid black; 
+}*/
+
+/*div img{
+  display: inline-block;
+  /* border: 10px solid black; 
+}
+
+div:nth-child(3n+1){
+  border: 10px solid blue;
+}
+
+div:nth-child(3n+2){
+    border: 10px dashed black;
+    position:relative;
+    top: 200px;
+}   
+
+div:nth-child(3n+3){
+    border: 10px solid green;
+    position: relative;
+    top: -25px;
+}
+
+main div:hover{
+  border-style: none;
+}
+
+
+
+
+/* Style every 3rd element 
+div:nth-child(2n+2){
+  border: 10px solid black;
+} */
+
+/* style all the even divs 
+div:nth-child(even){
+  border: 10px solid black;
+}  */
+
+/* style all the odd divs 
+div:nth-child(odd){
+  border: 10px solid black;
+} */
+
+/* style all the odd divs 
+div:nth-child(odd){
+  border: 10px solid black;
+} */
+
+/*div img{
+  display: inline-block;
+  border: 10px solid black;
+}  */
+
+/* div{
+  display: inline-block;
+}
+  /*border: 10px solid black; 
+} */
+
+
+/* div{
+  display: block;
+} */
+
+/* div{
+  display: none;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+main {
+    border: 5px #000 solid;
+    margin: 10px;
+}
+ */
+/* 
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+ */
+/* img{
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+} */
+
+/* .child {
+    position: relative;
+    display: inline-block;
+    border: 5px black solid;
+    margin: 5px;
+    border-radius: 5px;
+} */
+
+/* 
+
+.label {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+} */
+/* 
+.button {
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 25px;
+}
+ */
+/* 
+.button:hover {
+    background-color:#fff;
+} */
+
+/* 
+footer {
+    display: flex;
+    justify-content: center;
+} */
+
+/* 
+header {
+    border-radius: 5px;
+    border: 5px #000 solid;
+    margin: 10px;
+} */
+
+/* 
+.label {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+} */
+/* 
+.child:hover .label {
+    display: block;
+} */
